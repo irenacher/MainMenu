@@ -1,9 +1,11 @@
 package com.example.irenachernyak.mainmenu;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +35,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onUnderstandHairLossClick(View view) {
+
+        String [] topics = {"Overview","Male Baldness", "Female Baldness", "What's Next?"};
+        Intent intent = new Intent(this, TopicsActivity.class);
+        Topics topicsarray = new Topics(topics);
+        intent.putExtra("Topics", topicsarray);
+        startActivity(intent);
     }
 }
