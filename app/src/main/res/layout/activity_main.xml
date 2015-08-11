@@ -44,7 +44,8 @@
         style = "@style/MenuButtonStyle"
         android:text="@string/learn_artas_option"
         android:id="@+id/artas_info_button"
-        android:drawableLeft="@drawable/learn_artas"/>
+        android:drawableLeft="@drawable/learn_artas"
+        android:onClick="onLearnArtasClick"/>
 
     <Button
         style = "@style/MenuButtonStyle"

@@ -9,4 +9,6 @@
     <string name="request_option">Online Consultation Request</string>
     <string name="visualize_option">Visualize Hair Loss</string>
     <string name="call_concierge_option">Contact ARTAS Concierge</string>
+    <string name="imagefile_hairloss_topics">\@drawable/overview01</string>
+    <string name="imagefile_artas_robot">\@drawable/artas-robot</string>
 </resources>

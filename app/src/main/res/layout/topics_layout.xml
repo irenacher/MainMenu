@@ -17,8 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:id="@+id/topics_imageView"
-        android:src="@drawable/overview01"
-        android:scaleType="fitXY"
         android:layout_alignParentBottom="true"
         />
 

@@ -43,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TopicsActivity.class);
         Topics topicsarray = new Topics(topics);
         intent.putExtra("Topics", topicsarray);
+        int resId = R.drawable.overview01;
+        intent.putExtra("Image", R.drawable.overview01);
+        startActivity(intent);
+    }
+
+    public void onLearnArtasClick(View view) {
+        String [] topics = {"ARTAS Overview","ARTAS Before and After Photos", "ARTAS Video Library"};
+        Intent intent = new Intent(this, TopicsActivity.class);
+        Topics topicsarray = new Topics(topics);
+        intent.putExtra("Topics", topicsarray);
+        int resId = R.drawable.artas_robot;
+//        int resID = getResources().getIdentifier("artas_robot" , "drawable", getPackageName());
+        intent.putExtra("Image", R.drawable.artas_robot);
         startActivity(intent);
     }
 }
