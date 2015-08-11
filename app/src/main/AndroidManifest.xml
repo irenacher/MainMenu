@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".TopicsActivity"
             android:label="ShowTopics"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity">
 
         </activity>
     </application>
