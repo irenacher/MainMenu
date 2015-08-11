@@ -28,81 +28,39 @@
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Find an ARTAS Physician"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:drawableLeft="@drawable/find_physician"
-        android:drawablePadding="10dp"
-        android:id="@+id/physician_menu_button"
-        android:background="#d7ffeb"
-        android:layout_weight="1" />
+        android:id="@+id/physician_menu_button"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Understanding Hair Loss"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:drawableLeft="@drawable/understand_hair_loss"
-        android:drawablePadding="10dp"
-        android:id="@+id/hair_loss_info_button"
-        android:background="#d7ffeb"
-        android:layout_weight="1"/>
+        android:id="@+id/hair_loss_info_button"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Learn About ARTAS"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:id="@+id/artas_info_button"
-        android:drawableLeft="@drawable/learn_artas"
-        android:drawablePadding="10dp"
-        android:background="#d7ffeb"
-        android:layout_weight="1"/>
+        android:drawableLeft="@drawable/learn_artas"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Visualize Hair Loss"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:id="@+id/vizualize_button"
-        android:drawableLeft="@drawable/evaluate_your_hair_loss"
-        android:drawablePadding="10dp"
-        android:background="#d7ffeb"
-        android:layout_weight="1"/>
+        android:drawableLeft="@drawable/evaluate_your_hair_loss"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Online Consultation Request"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:id="@+id/request_button"
-        android:drawableLeft="@drawable/request"
-        android:drawablePadding="10dp"
-        android:background="#d7ffeb"
-        android:layout_weight="1"/>
+        android:drawableLeft="@drawable/request"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style = "@style/MenuButtonStyle"
         android:text="Contact ARTAS Concierge"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:gravity="left|center"
         android:id="@+id/concierge_button"
-        android:drawableLeft="@drawable/call_concierge"
-        android:drawablePadding="10dp"
-        android:background="#d7ffeb"
-        android:layout_weight="1"/>
+        android:drawableLeft="@drawable/call_concierge" />
     </LinearLayout>
 </RelativeLayout>
