@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TopicsActivity.class);
         Topics topicsarray = new Topics(topics);
         intent.putExtra("Topics", topicsarray);
-        int resId = R.drawable.overview01;
-        intent.putExtra("Image", R.drawable.overview01);
+        int resId = R.drawable.image_overview_01;
+        intent.putExtra("Image", R.drawable.image_overview_01);
         startActivity(intent);
     }
 
