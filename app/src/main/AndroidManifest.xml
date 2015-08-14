@@ -23,6 +23,13 @@
             android:parentActivityName=".MainActivity">
 
         </activity>
+
+        <activity android:name=".HairLossDetailsActivity"
+            android:label="ShowHLInfo"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".TopicsActivity">
+
+        </activity>
     </application>
 
 </manifest>

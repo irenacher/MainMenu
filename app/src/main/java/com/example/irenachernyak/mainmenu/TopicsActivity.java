@@ -14,10 +14,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 /**
@@ -35,6 +38,35 @@ public class TopicsActivity extends AppCompatActivity{
             ListAdapter listAdapter = new TopicsListAdapter(this, currentTopics.getTopics());
             ListView listView = (ListView) findViewById(R.id.listView);
             listView.setAdapter(listAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+//                    Toast.makeText(getApplicationContext(), "Click ListItem Number " + position, Toast.LENGTH_SHORT).show();
+
+                    //start DetailsActivity passing position
+                    Intent intent = new Intent(TopicsActivity.this, HairLossDetailsActivity.class);
+                    String topicFileName = ""; //= (String)parent.getItemAtPosition(position);
+                    switch (position) {
+                        case 0:
+                            topicFileName = "Overview.txt";
+                            break;
+                        case 1:
+                            topicFileName = "MaleBaldness.txt";
+                            break;
+                        case 2:
+                            topicFileName = "FemaleBaldness.txt";
+                            break;
+                        case 3:
+                            topicFileName = "HowFar.txt";
+                            break;
+                    }
+                    intent.putExtra("TopicFileName", topicFileName);
+                    startActivity(intent);
+                }
+            });
+
         }
 
         int resourceId = (int)activityThatCalled.getExtras().getInt("Image", R.drawable.artas_robot);

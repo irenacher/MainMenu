@@ -18,10 +18,10 @@
 
     <ImageView
         android:id="@+id/arrow_imageview"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="25dp"
+        android:baselineAlignBottom="true"
         android:src="@drawable/arrow"
-   />
+        android:layout_marginTop="10dp" />
 </LinearLayout>
