@@ -7,8 +7,16 @@ import java.io.InputStream;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.util.Log;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,16 +39,48 @@ public class HairLossDetailsActivity extends Activity{
         {
             //Load the file from assets folder - don't forget to INCLUDE the extension
             String output = LoadFile(topicfilename, false);
-            TextView tv = (TextView)findViewById(R.id.details_textView);
+//            TextView tv = (TextView)findViewById(R.id.details_textView);
+
+            LinearLayout detailsLayout = (LinearLayout)findViewById(R.id.details_linear_layout);
             int pos = -1;
-            // parse text file  and put only text into TextView
+            // parse text string
             String [] imageStartFragments = output.split("<");
+
+
+            int index = 0;
+
             for(int i = 0; i < imageStartFragments.length; i++){
+                if(!imageStartFragments[i].equals("")){
                 pos = imageStartFragments[i].indexOf(">");
                 if(pos != -1) {
                     String imageFileName = imageStartFragments[i].substring(0, pos);
-                    String textFragment = imageStartFragments[i].substring(pos+1);
-                    tv.append(textFragment);
+
+                    String formatted = imageFileName.toLowerCase().replace('-', '_');
+                    int dotpos = formatted.indexOf('.');
+                    formatted = formatted.substring(0, dotpos);
+
+                    int imageResId = getResources().getIdentifier(formatted, "drawable", getPackageName());
+                    ImageView iv = new ImageView(this);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 600);
+                    iv.setLayoutParams(layoutParams);
+                    iv.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                    iv.setImageResource(imageResId);
+                    detailsLayout.addView(iv, index);
+
+                    String textFragment = imageStartFragments[i].substring(pos + 1);
+
+                    TextView tv = new TextView(this);
+                    tv.setText(textFragment);
+                    detailsLayout.addView(tv, ++index);
+                    index++;
+                }
+
+//                    SpannableStringBuilder ssb = new SpannableStringBuilder( textFragment);
+//                    Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.find_physician);
+//                    ssb.setSpan( new ImageSpan( this, image ), 0, 0, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+//                    tv.setText(ssb, TextView.BufferType.SPANNABLE);
+
+//                    tv.append(textFragment);
                 }
             }
         }
