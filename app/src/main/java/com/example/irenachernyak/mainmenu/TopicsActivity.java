@@ -1,6 +1,10 @@
 package com.example.irenachernyak.mainmenu;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +26,15 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 
 /**
  * Created by irenachernyak on 8/10/15.
@@ -32,8 +45,58 @@ public class TopicsActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.topics_layout);
 
+        Topics currentTopics = null;
+        int resourceId = 0;
+
         Intent activityThatCalled = getIntent();
-        Topics currentTopics = (Topics)activityThatCalled.getExtras().getSerializable("Topics");
+        Bundle extras = activityThatCalled.getExtras();
+        if(extras != null) {
+            // get everything from extras and save them in SharedPreferences for the future when activity will be
+            // displayed by navigating Up from the child activity
+            currentTopics = (Topics)extras.getSerializable("Topics");
+            resourceId = (int)activityThatCalled.getExtras().getInt("Image", R.drawable.artas_robot);
+
+            try {
+                JSONArray jsonArr = new JSONArray();
+                for (String title : currentTopics.getTopics()) {
+                    JSONObject pnObj = new JSONObject();
+                    pnObj.put("topictitle", title);
+                    jsonArr.put(pnObj);
+                }
+                SharedPreferences.Editor spEditor = getPreferences(Context.MODE_PRIVATE).edit();
+                String serializedtopics = jsonArr.toString();
+                spEditor.putString("TopicTitles", serializedtopics);
+                spEditor.putInt("ImageResId", resourceId);
+                spEditor.commit();
+            } catch(JSONException ex){
+                ex.printStackTrace();
+            }
+
+        } else {
+            SharedPreferences preferences = getPreferences(Context.MODE_PRIVATE);
+            String sTitles = preferences.getString("TopicTitles", "");
+            resourceId = preferences.getInt("ImageResId",R.drawable.artas_robot);
+            if(!sTitles.equals("")){
+                try {
+
+                    JSONArray jArr = new JSONArray(sTitles);
+                    String [] titles = new String[jArr.length()];
+                    for (int i=0; i < jArr.length(); i++) {
+
+                        JSONObject obj = jArr.getJSONObject(i);
+                        String title = obj.getString("topictitle");
+                        titles[i] = title;
+                    }
+
+                    currentTopics = new Topics(titles);
+
+                }catch(JSONException ex){
+                    ex.printStackTrace();
+                }
+
+            }
+        }
+        // now set topics in list
         if(currentTopics.getTopics() != null){
             ListAdapter listAdapter = new TopicsListAdapter(this, currentTopics.getTopics());
             ListView listView = (ListView) findViewById(R.id.listView);
@@ -43,7 +106,6 @@ public class TopicsActivity extends AppCompatActivity{
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
-//                    Toast.makeText(getApplicationContext(), "Click ListItem Number " + position, Toast.LENGTH_SHORT).show();
 
                     //start DetailsActivity passing position
                     Intent intent = new Intent(TopicsActivity.this, HairLossDetailsActivity.class);
@@ -69,7 +131,7 @@ public class TopicsActivity extends AppCompatActivity{
 
         }
 
-        int resourceId = (int)activityThatCalled.getExtras().getInt("Image", R.drawable.artas_robot);
+        // set image into ImageView
         ImageView imageView = (ImageView)findViewById(R.id.topics_imageView);
         imageView.setImageResource(resourceId);
 
