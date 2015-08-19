@@ -41,7 +41,7 @@
         <activity android:name=".EvaluateNorwoodActivity"
             android:label="Visualize Your Hair Loss"
             android:theme="@style/AppTheme"
-            android:parentActivityName=".TakeSelfieActivity">
+            android:parentActivityName=".MainActivity">
 
         </activity>
 
