@@ -62,4 +62,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Image", R.drawable.artas_robot);
         startActivity(intent);
     }
+
+    public void onVisualizeHairLoss(View view) {
+        Intent intent = new Intent(this, TakeSelfieActivity.class);
+        startActivity(intent);
+    }
 }

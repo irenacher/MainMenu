@@ -51,7 +51,8 @@
         style = "@style/MenuButtonStyle"
         android:text="@string/visualize_option"
         android:id="@+id/vizualize_button"
-        android:drawableLeft="@drawable/evaluate_your_hair_loss"/>
+        android:drawableLeft="@drawable/evaluate_your_hair_loss"
+        android:onClick="onVisualizeHairLoss"/>
 
     <Button
         style = "@style/MenuButtonStyle"

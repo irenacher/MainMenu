@@ -30,6 +30,21 @@
             android:parentActivityName=".TopicsActivity">
 
         </activity>
+
+        <activity android:name=".TakeSelfieActivity"
+            android:label="Visualize Your Hair Loss"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".EvaluateNorwoodActivity"
+            android:label="Visualize Your Hair Loss"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".TakeSelfieActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

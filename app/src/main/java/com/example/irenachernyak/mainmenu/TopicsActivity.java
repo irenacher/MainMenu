@@ -109,7 +109,7 @@ public class TopicsActivity extends AppCompatActivity{
 
                     //start DetailsActivity passing position
                     Intent intent = new Intent(TopicsActivity.this, HairLossDetailsActivity.class);
-                    String topicFileName = ""; //= (String)parent.getItemAtPosition(position);
+                    String topicFileName = "";
                     switch (position) {
                         case 0:
                             topicFileName = "Overview.txt";
