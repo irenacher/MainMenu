@@ -14,7 +14,10 @@
         android:adjustViewBounds="true"
         android:src="@drawable/placeholder_top"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:clickable="true"
+        android:onClick="onSelfieClick" />
 
      <LinearLayout
         android:layout_width="match_parent"

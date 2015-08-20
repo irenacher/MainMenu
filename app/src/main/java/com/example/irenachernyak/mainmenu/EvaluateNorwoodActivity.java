@@ -1,17 +1,19 @@
 package com.example.irenachernyak.mainmenu;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import android.widget.Toast;
 
 /**
  * Created by irenachernyak on 8/17/15.
@@ -35,6 +37,9 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
             "You have extensive hair loss with only a wreath of hair remaining on the back and sides. "
     };
 
+    private static final int CAMERA_REQUEST = 1313;
+
+    ImageView selfieImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,20 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
         TextView hintTV = (TextView)findViewById(R.id.norwood_hint_textView);
         hintTV.setText("Choose the image that matches your hair loss progression");
+        selfieImageView = (ImageView)findViewById(R.id.selfie_imageView);
+
+        // start camera to take picture
+        OpenCamera();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAMERA_REQUEST && resultCode == RESULT_OK){
+            Bitmap bmp = (Bitmap)data.getExtras().get("data");
+            selfieImageView.setImageBitmap(bmp);
+        }
     }
 
     @Override
@@ -109,5 +128,21 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
     }
 
 
+    public void onSelfieClick(View view) {
+        OpenCamera();
+    }
 
+    private void OpenCamera()
+    {
+        // check that camera exists
+        if (!getPackageManager()
+                .hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            Toast.makeText(this, "No camera on this device", Toast.LENGTH_LONG)
+                    .show();
+        } else {
+            // camera exists so show camera preview to take picture, this way camera opens with Rear Camera by default!
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, CAMERA_REQUEST);
+        }
+    }
 }

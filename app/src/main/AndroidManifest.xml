@@ -7,6 +7,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!-- permissions needed to use camera APIs -->
+        <uses-permission android:name="android.permission.CAMERA"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -20,6 +25,7 @@
         <activity android:name=".TopicsActivity"
             android:label="ShowTopics"
             android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
             android:parentActivityName=".MainActivity">
 
         </activity>
@@ -27,6 +33,7 @@
         <activity android:name=".HairLossDetailsActivity"
             android:label="ShowHLInfo"
             android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
             android:parentActivityName=".TopicsActivity">
 
         </activity>
@@ -34,6 +41,7 @@
         <activity android:name=".TakeSelfieActivity"
             android:label="Visualize Your Hair Loss"
             android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
             android:parentActivityName=".MainActivity">
 
         </activity>
@@ -41,6 +49,7 @@
         <activity android:name=".EvaluateNorwoodActivity"
             android:label="Visualize Your Hair Loss"
             android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
             android:parentActivityName=".MainActivity">
 
         </activity>
