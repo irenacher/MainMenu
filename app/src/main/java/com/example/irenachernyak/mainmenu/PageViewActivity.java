@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.viewpagerindicator.CirclePageIndicator;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ import java.util.List;
 public class PageViewActivity extends AppCompatActivity {
 
     InfoPagerAdapter pagerAdapter;
+    com.viewpagerindicator.CirclePageIndicator pageIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,12 @@ public class PageViewActivity extends AppCompatActivity {
         ViewPager pager = (ViewPager)findViewById(R.id.viewpager);
         pager.setAdapter(pagerAdapter);
 
+        // ViewPager Indicator
+        pageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        pageIndicator.setFillColor(R.color.button_material_dark);
+        pageIndicator.setStrokeColor(R.color.button_material_dark);
+//        pageIndicator.setFades(false);
+        pageIndicator.setViewPager(pager);
 
     }
 
