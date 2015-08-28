@@ -12,4 +12,9 @@
     <string name="imagefile_hairloss_topics">\@drawable/overview01</string>
     <string name="imagefile_artas_robot">\@drawable/artas-robot</string>
     <string name="take_selfie_hint_textview">Take a picture in the position shown above to see the stage of your hair loss</string>
+    <string name="hair_loss_info_type">HairLossInfo</string>
+    <string name="artas_info_type">ArtasInfo</string>
+    <string name="hair_loss_topics_title">Understanding Hair Loss</string>
+    <string name="artas_info_topics_title">Learn More About ARTAS</string>
+    <string name="before_after_pager_title">Before And After</string>
 </resources>

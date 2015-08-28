@@ -23,15 +23,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".TopicsActivity"
-            android:label="ShowTopics"
-            android:theme="@style/AppTheme"
+             android:theme="@style/AppTheme"
             android:screenOrientation="userPortrait"
             android:parentActivityName=".MainActivity">
 
         </activity>
 
         <activity android:name=".HairLossDetailsActivity"
-            android:label="ShowHLInfo"
             android:theme="@style/AppTheme"
             android:screenOrientation="userPortrait"
             android:parentActivityName=".TopicsActivity">
@@ -51,6 +49,13 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="userPortrait"
             android:parentActivityName=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".PageViewActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
+            android:parentActivityName=".TopicsActivity">
 
         </activity>
 

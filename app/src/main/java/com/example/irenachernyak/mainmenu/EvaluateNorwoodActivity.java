@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 /**
  * Created by irenachernyak on 8/17/15.
  */
@@ -134,15 +135,16 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
     private void OpenCamera()
     {
+        PackageManager pm = getPackageManager();
+        boolean hasBackCamera = pm.hasSystemFeature(PackageManager.FEATURE_CAMERA);
+        boolean hasFrontCamera = pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT);
         // check that camera exists
-        if (!getPackageManager()
-                .hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
-            Toast.makeText(this, "No camera on this device", Toast.LENGTH_LONG)
-                    .show();
+        if (!hasBackCamera && !hasFrontCamera) {
+            Toast.makeText(this, "No camera on this device", Toast.LENGTH_LONG).show();
         } else {
             // camera exists so show camera preview to take picture, this way camera opens with Rear Camera by default!
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent, CAMERA_REQUEST);
+             startActivityForResult(intent, CAMERA_REQUEST);
         }
     }
 }

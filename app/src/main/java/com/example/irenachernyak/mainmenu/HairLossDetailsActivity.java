@@ -1,30 +1,22 @@
 package com.example.irenachernyak.mainmenu;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
-import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by irenachernyak on 8/13/15.
@@ -39,6 +31,8 @@ public class HairLossDetailsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String topicfilename = intent.getStringExtra("TopicFileName");
+        String title = intent.getStringExtra("Title");
+        this.setTitle(title);
 
         try
         {
