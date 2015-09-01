@@ -35,7 +35,7 @@ public class ImagePageFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.page_fragment_layout, container, false);
+        View view = inflater.inflate(R.layout.image_page_fragment_layout, container, false);
         ImageView iv = (ImageView)view.findViewById(R.id.infoImageView);
         int resourceId = getArguments().getInt("ImageId", 0);
         iv.setImageResource(resourceId);

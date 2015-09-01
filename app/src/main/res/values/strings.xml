@@ -17,4 +17,7 @@
     <string name="hair_loss_topics_title">Understanding Hair Loss</string>
     <string name="artas_info_topics_title">Learn More About ARTAS</string>
     <string name="before_after_pager_title">Before And After</string>
+
+    <string name="video1">https://vimeo.com/134856430</string>
+    <string name="video2">https://vimeo.com/124976936</string>
 </resources>

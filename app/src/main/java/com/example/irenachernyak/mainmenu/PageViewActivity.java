@@ -38,16 +38,40 @@ public class PageViewActivity extends AppCompatActivity {
 
     }
 
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        ((VideoPageFragment)pagerAdapter.getItem(0)).stopVideo();
+//    }
+
     private List<Fragment> getFragments(){
         List<Fragment> flist = new ArrayList<Fragment>();
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_1));
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_2));
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_3));
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_4));
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_5));
-        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_6));
+
+        //to play videos
+        flist.add(VideoPageFragment.newInstance(getString(R.string.video2)));
+        flist.add(VideoPageFragment.newInstance(getString(R.string.video1)));
+
+        // to display B&A pics
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_1));
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_2));
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_3));
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_4));
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_5));
+//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_6));
 
         return flist;
     }
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        ((VideoPageFragment)pagerAdapter.getItem(0)).playVideo();
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        ((VideoPageFragment)pagerAdapter.getItem(0)).pauseVideo();
+//    }
 
 }
