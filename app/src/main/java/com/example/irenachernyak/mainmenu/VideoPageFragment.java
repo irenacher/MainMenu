@@ -45,39 +45,19 @@ public class VideoPageFragment extends android.support.v4.app.Fragment {
         videoView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         videoView.setWebViewClient(new WebViewClient());
         videoView.getSettings().setJavaScriptEnabled(true);
-        String videoId = mParam1.substring(mParam1.lastIndexOf( '/') + 1);
-//        String url = String.format("http://player.vimeo.com/video/%s?title=0&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;autoplay=1&quot;", videoId);
+        String videoId = mParam1.substring(mParam1.lastIndexOf('/') + 1);
         String url = String.format("http://player.vimeo.com/video/%s?title=0&amp;amp;byline=1&amp;amp;autoplay=1&quot;", videoId);
-
 //        videoView.loadUrl(mParam1);
         videoView.loadUrl(url);
         return view;
 
-
-        // that loads vimeo page with the video in a separate activity but hard to return back to the topics from it
-        //        String uriString = "http://player.vimeo.com/video" + mParam1.substring(mParam1.lastIndexOf('/'));
-//        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(uriString)));
-
     }
 
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-////        videoView.setMediaController(new MediaController(getActivity()));
-//        playVideo();
-//    }
-
-    public void playVideo() {
-
-//        if (Build.VERSION.SDK_INT >= 19) {
-//            videoView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-//        }
-//        videoView.loadUrl(mParam1);
-
-
-//        String uriString = "http://player.vimeo.com/video" + mParam1.substring(mParam1.lastIndexOf('/'));
-//        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(uriString)));
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        videoView.loadUrl("about:blank"); // stops audio when user taps back button
     }
+
 
 }
