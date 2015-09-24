@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ethnicity_names">
+        <item>Caucasian</item>
+        <item>African American</item>
+        <item>Asian</item>
+        <item>Hispanic</item>
+        <item>Middle Eastern</item>
+        <item>Pacific Islander</item>
+    </string-array>
+
+    <string-array name="gender_names">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="hair_colors">
+        <item>Black</item>
+        <item>Blonde</item>
+        <item>Brown</item>
+        <item>Grey/White</item>
+        <item>Red</item>
+    </string-array>
+
+    <string-array name="hair_types">
+        <item>Straight</item>
+        <item>Wavy</item>
+        <item>Curly</item>
+    </string-array>
+
+</resources>

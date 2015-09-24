@@ -58,7 +58,8 @@
         style = "@style/MenuButtonStyle"
         android:text="@string/request_option"
         android:id="@+id/request_button"
-        android:drawableLeft="@drawable/request"/>
+        android:drawableLeft="@drawable/request"
+        android:onClick="onConsultationRequest"/>
 
     <Button
         style = "@style/MenuButtonStyle"

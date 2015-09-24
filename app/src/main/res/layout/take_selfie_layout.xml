@@ -35,5 +35,6 @@
         android:layout_gravity="center_horizontal"
         android:src="@drawable/button_camera"
         android:layout_marginTop="10dp"
-        android:onClick="onEvaluateHairLoss"/>
+        android:onClick="onEvaluateHairLoss"
+        android:background="#d7ffeb" />
 </LinearLayout>

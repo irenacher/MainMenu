@@ -65,6 +65,21 @@
 
         </activity>
 
+        <activity android:name=".RequestPhotosActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".RequestFormActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="userPortrait"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName=".RequestPhotosActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

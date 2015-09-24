@@ -66,4 +66,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TakeSelfieActivity.class);
         startActivity(intent);
     }
+
+    public void onConsultationRequest(View view) {
+        Intent intent = new Intent(this, RequestPhotosActivity.class);
+        startActivity(intent);
+    }
 }

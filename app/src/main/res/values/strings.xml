@@ -20,4 +20,12 @@
 
     <string name="video1">https://vimeo.com/134856430</string>
     <string name="video2">https://vimeo.com/124976936</string>
+    <string name="photo_descr_label_textview">To request ARTAS robotic transplant consultation take photos from each side</string>
+    <string name="terms_of_use_button_text">Terms of Use</string>
+    <string name="and_text">and</string>
+    <string name="privacy_policy_button_text">Privacy Policy</string>
+    <string name="ethnicity_prompt">Select Ethnicity</string>
+    <string name="gender_default">Male</string>
+    <string name="hcolor_prompt">Select Hair Color</string>
+    <string name="htype_prompt">Select Hair Type</string>
 </resources>

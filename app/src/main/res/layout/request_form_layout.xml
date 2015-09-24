@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#d7ffeb"
+    android:id="@+id/mainLayout"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/firstname_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="First name *"
+                    android:id="@+id/textView3"
+                    style="@style/RequestFormTextView"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editFirstNameText"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstname_layout"
+                android:id="@+id/lastname_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Last name *"
+                    android:id="@+id/textView4"
+                    style="@style/RequestFormTextView"/>
+
+                 <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editLastNameText"
+                    android:layout_weight="1"
+                     android:singleLine="true"
+                     style="@style/RequestFormEditView"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastname_layout"
+                android:id="@+id/email_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email *"
+                    android:id="@+id/email_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email_editText"
+                    android:layout_weight="1"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_layout"
+                android:id="@+id/phone_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Phone *"
+                    android:id="@+id/phone_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_weight="1"
+                    android:id="@+id/phone_editText"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/phone_layout"
+                android:id="@+id/city_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="City *"
+                    android:id="@+id/city_textView"
+                    style="@style/RequestFormTextView"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city_editText"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city_layout"
+                android:id="@+id/state_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="State *"
+                    android:id="@+id/state_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/state_editText"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/state_layout"
+                android:id="@+id/ethnicity_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ethnicity"
+                    android:id="@+id/ethnicity_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:id="@+id/ethnicity_spinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ethnicity_layout"
+                android:id="@+id/gender_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:id="@+id/gender_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <Spinner
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gender_spinner"
+                    android:layout_weight="1"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender_layout"
+                android:id="@+id/haircolor_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hair Color"
+                    android:id="@+id/hcolor_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <Spinner
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hcolor_spinner"
+                    android:layout_weight="1"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/haircolor_layout"
+                android:id="@+id/hairtype_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hair Type"
+                    android:id="@+id/htype_textView"
+                    style="@style/RequestFormTextView"/>
+
+                <Spinner
+                    android:layout_width="103dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/htype_spinner"
+                    android:layout_weight="1"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Specific areas of concern"
+                android:id="@+id/concerns_textView"
+                android:layout_below="@+id/hairtype_layout"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                style="@style/RequestFormTextView"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/concerns_editText"
+                android:layout_below="@+id/concerns_textView"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:hint="hairline, crown, full head"
+                android:singleLine="true"
+                style="@style/RequestFormEditView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/concerns_editText"
+                android:id="@+id/user_consent_layout"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Any previous hair restoration treatments?"
+                    android:id="@+id/treatments_textView"
+                    android:layout_weight="1"
+                    style="@style/RequestFormTextView"
+                    />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/treatments_switch"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_email"
+        android:id="@+id/imageButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/user_consent_layout"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:background="#d7ffeb"
+        android:layout_marginTop="15dp"
+        android:onClick="onSubmitRequest"/>
+    </RelativeLayout>
+</ScrollView>
