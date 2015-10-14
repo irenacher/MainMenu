@@ -71,4 +71,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RequestPhotosActivity.class);
         startActivity(intent);
     }
+
+    public void onFindPhysician(View view) {
+//        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, PhysiciansContainerActivity.class);
+        startActivity(intent);
+    }
 }

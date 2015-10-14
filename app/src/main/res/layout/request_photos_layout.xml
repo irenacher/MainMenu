@@ -34,25 +34,40 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
             android:id="@+id/imageViewFront"
             android:src="@drawable/photos_front"
-            android:layout_weight="1"/>
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:paddingRight="5dp"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:onClick="takePhoto"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
             android:id="@+id/imageViewLeft"
             android:src="@drawable/photos_left"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+             android:paddingRight="5dp"
+            android:onClick="takePhoto"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
             android:id="@+id/imageViewRight"
             android:src="@drawable/photos_right"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="takePhoto"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -67,18 +82,28 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
             android:id="@+id/imageViewBack"
             android:src="@drawable/photos_back"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="takePhoto"/>
+
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
             android:id="@+id/imageViewTop"
             android:src="@drawable/photos_top"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:onClick="takePhoto"/>
+
     </LinearLayout>
 
     <LinearLayout

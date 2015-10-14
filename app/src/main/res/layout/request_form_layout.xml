@@ -19,7 +19,7 @@
                 android:id="@+id/firstname_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1" >
 
                 <TextView
                     android:layout_width="100dp"
@@ -36,7 +36,8 @@
                     android:id="@+id/editFirstNameText"
                     android:layout_weight="1"
                     android:singleLine="true"
-                    style="@style/RequestFormEditView"/>
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
 
             </LinearLayout>
 
@@ -48,7 +49,8 @@
                 android:id="@+id/lastname_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -65,7 +67,8 @@
                     android:id="@+id/editLastNameText"
                     android:layout_weight="1"
                      android:singleLine="true"
-                     style="@style/RequestFormEditView"/>
+                     style="@style/RequestFormEditView"
+                     android:background="@drawable/edittext_style"/>
             </LinearLayout>
 
             <LinearLayout
@@ -76,7 +79,8 @@
                 android:id="@+id/email_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -92,7 +96,8 @@
                     android:layout_weight="1"
                     android:inputType="textEmailAddress"
                     android:singleLine="true"
-                    style="@style/RequestFormEditView"/>
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
 
             </LinearLayout>
 
@@ -104,7 +109,8 @@
                 android:id="@+id/phone_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp" >
 
                 <TextView
                     android:layout_width="100dp"
@@ -120,7 +126,8 @@
                     android:layout_weight="1"
                     android:id="@+id/phone_editText"
                     android:singleLine="true"
-                    style="@style/RequestFormEditView"/>
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
             </LinearLayout>
 
             <LinearLayout
@@ -131,7 +138,8 @@
                 android:id="@+id/city_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp" >
 
                 <TextView
                     android:layout_width="100dp"
@@ -145,7 +153,8 @@
                     android:id="@+id/city_editText"
                     android:layout_weight="1"
                     android:singleLine="true"
-                    style="@style/RequestFormEditView"/>
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
 
             </LinearLayout>
 
@@ -157,7 +166,8 @@
                 android:id="@+id/state_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -172,7 +182,8 @@
                     android:id="@+id/state_editText"
                     android:layout_weight="1"
                     android:singleLine="true"
-                    style="@style/RequestFormEditView"/>
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
             </LinearLayout>
 
             <LinearLayout
@@ -183,7 +194,8 @@
                 android:id="@+id/ethnicity_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -194,9 +206,11 @@
 
                 <Spinner
                     android:layout_width="match_parent"
-                    android:layout_height="43dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/ethnicity_spinner"
-                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="#c1ffef"
                     />
             </LinearLayout>
 
@@ -208,7 +222,8 @@
                 android:id="@+id/gender_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -222,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/gender_spinner"
                     android:layout_weight="1"
-                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+
                     />
             </LinearLayout>
 
@@ -234,7 +249,8 @@
                 android:id="@+id/haircolor_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -248,7 +264,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/hcolor_spinner"
                     android:layout_weight="1"
-                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
                     />
             </LinearLayout>
 
@@ -260,7 +275,8 @@
                 android:id="@+id/hairtype_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="100dp"
@@ -273,8 +289,7 @@
                     android:layout_width="103dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/htype_spinner"
-                    android:layout_weight="1"
-                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <TextView
@@ -296,10 +311,12 @@
                 android:layout_below="@+id/concerns_textView"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:hint="hairline, crown, full head"
                 android:singleLine="true"
-                style="@style/RequestFormEditView"/>
+                style="@style/RequestFormEditView"
+                android:background="@drawable/edittext_style"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -310,7 +327,8 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -31,7 +31,8 @@
         style = "@style/MenuButtonStyle"
         android:text="@string/find_physician_option"
         android:drawableLeft="@drawable/find_physician"
-        android:id="@+id/physician_menu_button"/>
+        android:id="@+id/physician_menu_button"
+        android:onClick="onFindPhysician"/>
 
     <Button
         style = "@style/MenuButtonStyle"
