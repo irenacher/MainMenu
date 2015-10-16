@@ -29,4 +29,10 @@
     <string name="hcolor_prompt">Select Hair Color</string>
     <string name="htype_prompt">Select Hair Type</string>
     <string name="title_activity_maps">Map</string>
+    <string name="option_list">LIST</string>
+    <string name="option_map">MAP</string>
+    <string name="search_title">Search</string>
+    <string name="finder_label">Finder</string>
+    <string name="search_hint">Search by state, city or zipcode</string>
+    <string name="finder_activity_title">Physician Finder</string>
 </resources>

@@ -1,32 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_frame"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
+
+    <RadioGroup
+        android:id="@+id/buttongroup1"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Map"
-        android:id="@+id/textView5"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#010000"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/map"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:name="com.google.android.gms.maps.MapFragment"/>
+        <com.example.irenachernyak.mainmenu.SegmentedToggleButton
+            android:id="@+id/option1"
+            android:text="@string/option_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onToggleListClicked" />
 
-</LinearLayout>
+        <com.example.irenachernyak.mainmenu.SegmentedToggleButton
+            android:id="@+id/option2"
+            android:text="@string/option_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onToggleMapClicked" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttongroup1">
+        <fragment
+            class="com.example.irenachernyak.mainmenu.MyListFragment"
+            android:id="@+id/sample_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>
