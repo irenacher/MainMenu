@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7ffeb"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/doctor_clinic_frame"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:id="@+id/doctor_photo"
+            android:paddingRight="10dp"
+            android:src="@drawable/photo_feinberg"
+            android:scaleType="fitStart"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/clinic_details"
+            android:layout_toRightOf="@+id/doctor_photo"
+            android:layout_alignBottom="@+id/doctor_photo"
+            android:layout_alignTop="@+id/doctor_photo"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hair Restoration Institute"
+                android:id="@+id/clinic_name"
+                android:paddingBottom="10dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/clinic_address"
+                android:text="422 South Alafaya Trail Suite 32A Orlando, FL 32828"
+                android:paddingBottom="10dp"
+                android:textColor="#000000"
+                android:textStyle="italic"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(408)111-2233"
+                android:textColor="#127679"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:id="@+id/phone_button"
+                android:onClick="onCallDoctorClicked" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView1"
+        android:layout_below="@+id/doctor_clinic_frame">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:id="@+id/bio"
+                android:textColor="#000000"
+                android:text="As founder and chief surgeon of Leonard Hair Transplant Associates, Dr. Leonard is medically educated, trained and licensed to perform hair restoration procedures for men and women, to treat thinning hair, partial, and significant baldness. He also performs surgery for transgender patients to achieve more natural-appearing hairlines, eyebrow hair transplantation, restoration for aesthetic reasons or for correction after injury, and hair restoration in men or women who have had facial cosmetic procedures.  He has been a pioneer in the field of hair restoration surgery and an early adopter of the latest technology such as the ARTAS Robotic System.\n\nDr. Leonard has served on a number of boards, including the State of Rhode Island Board of Medical Licensure and Discipline, and he has held leadership positions in several societies, including Founding Secretary and President of the International Society of Hair Restoration Surgery (ISHRS), Chairman of the ISHRS’s Bylaws and Ethics Committee, Chairman of the ISHRS’s Media Committee, Trustee of the University of New England, and Founding Trustee of the American Board of Hair Restoration Surgery. Dr. Leonard maintains offices in Cranston, Rhode Island; Boston, Worcester, Hyannis, Braintree, Newton Center, Massachusetts; and Salem, New Hampshire."
+                  />
+        </FrameLayout>
+    </ScrollView>
+
+</RelativeLayout>

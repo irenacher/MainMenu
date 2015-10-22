@@ -160,14 +160,6 @@ public class PhysiciansContainerActivity extends AppCompatActivity {
 
     }
 
-//
-//    public void onListItemClick(MyListFragment listFragment,
-//                                int position) {
-//
-//        // TODO Auto-generated method stub
-//
-//    }
-
 
     public void onToggleListClicked(View view) {
         if(mMapFragment != null && mMyListFragment != null) {

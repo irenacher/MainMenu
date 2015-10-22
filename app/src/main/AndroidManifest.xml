@@ -101,6 +101,13 @@
                 />
         </activity>
 
+         <activity android:name=".PhysicianDetailsActivity"
+             android:theme="@style/AppTheme"
+             android:parentActivityName=".PhysiciansContainerActivity"
+             android:screenOrientation="userPortrait">
+
+         </activity>
+
          <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
