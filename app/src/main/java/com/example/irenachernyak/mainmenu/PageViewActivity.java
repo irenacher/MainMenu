@@ -48,16 +48,16 @@ public class PageViewActivity extends AppCompatActivity {
         List<Fragment> flist = new ArrayList<Fragment>();
 
         //to play videos
-        flist.add(VideoPageFragment.newInstance(getString(R.string.video2)));
-        flist.add(VideoPageFragment.newInstance(getString(R.string.video1)));
+//        flist.add(VideoPageFragment.newInstance(getString(R.string.video2)));
+//        flist.add(VideoPageFragment.newInstance(getString(R.string.video1)));
 
         // to display B&A pics
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_1));
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_2));
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_3));
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_4));
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_5));
-//        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_6));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_1));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_2));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_3));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_4));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_5));
+        flist.add(ImagePageFragment.newInstance(R.drawable.before_and_after_6));
 
         return flist;
     }

@@ -39,8 +39,9 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
     };
 
     private static final int CAMERA_REQUEST = 1313;
-
     ImageView selfieImageView;
+
+     ImageButton selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,31 +49,18 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
         setContentView(R.layout.pick_norwood_layout);
 
-        ImageButton ib0 = (ImageButton)findViewById(R.id.scale_1_button);
-        ImageButton ib1 = (ImageButton)findViewById(R.id.scale_2_button);
-        ImageButton ib2 = (ImageButton)findViewById(R.id.scale_2a_button);
-        ImageButton ib3 = (ImageButton)findViewById(R.id.scale_3_button);
-        ImageButton ib4 = (ImageButton)findViewById(R.id.scale_3a_button);
-        ImageButton ib5 = (ImageButton)findViewById(R.id.scale_3vertex_button);
-        ImageButton ib6 = (ImageButton)findViewById(R.id.scale_4_button);
-        ImageButton ib7 = (ImageButton)findViewById(R.id.scale_4a_button);
-        ImageButton ib8 = (ImageButton)findViewById(R.id.scale_5_button);
-        ImageButton ib9 = (ImageButton)findViewById(R.id.scale_5a_button);
-        ImageButton ib10 = (ImageButton)findViewById(R.id.scale_6_button);
-        ImageButton ib11 = (ImageButton)findViewById(R.id.scale_7_button);
-
-        ib0.setTag(0);
-        ib1.setTag(1);
-        ib2.setTag(2);
-        ib3.setTag(3);
-        ib4.setTag(4);
-        ib5.setTag(5);
-        ib6.setTag(6);
-        ib7.setTag(7);
-        ib8.setTag(8);
-        ib9.setTag(9);
-        ib10.setTag(10);
-        ib11.setTag(11);
+        ((ImageButton)findViewById(R.id.scale_1_button)).setTag(0);
+        ((ImageButton)findViewById(R.id.scale_2_button)).setTag(1);
+        ((ImageButton)findViewById(R.id.scale_2a_button)).setTag(2);
+        ((ImageButton)findViewById(R.id.scale_3_button)).setTag(3);
+        ((ImageButton)findViewById(R.id.scale_3a_button)).setTag(4);
+        ((ImageButton)findViewById(R.id.scale_3vertex_button)).setTag(5);
+        ((ImageButton)findViewById(R.id.scale_4_button)).setTag(6);
+        ((ImageButton)findViewById(R.id.scale_4a_button)).setTag(7);
+        ((ImageButton)findViewById(R.id.scale_5_button)).setTag(8);
+        ((ImageButton)findViewById(R.id.scale_5a_button)).setTag(9);
+        ((ImageButton)findViewById(R.id.scale_6_button)).setTag(10);
+        ((ImageButton)findViewById(R.id.scale_7_button)).setTag(11);
 
         TextView hintTV = (TextView)findViewById(R.id.norwood_hint_textView);
         hintTV.setText("Choose the image that matches your hair loss progression");
@@ -117,6 +105,11 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
     public void onNorwoodButtonClick(View view) {
 
+        if(selected != null){
+            selected.setSelected(false);
+        }
+        ((ImageButton)view).setSelected(true);
+        selected = (ImageButton)view;
         int tag = (Integer)view.getTag();
         if(tag >=0) { // tag is index of description in array
 
@@ -127,7 +120,6 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
             descriptionTV.setText(descriptions[tag]);
         }
     }
-
 
     public void onSelfieClick(View view) {
         OpenCamera();

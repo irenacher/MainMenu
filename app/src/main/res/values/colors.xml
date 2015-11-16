@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionbar_background">#55a51c</color>
+    <color name="actionbar_text">#ffffff</color>
+    <color name="winBackground">#dcf4e0</color>
+    <color name="background">#55a51c</color>
+</resources>

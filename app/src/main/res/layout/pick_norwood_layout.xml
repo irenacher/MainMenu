@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-     android:background="#d7ffeb">
+    >
 
     <ImageView
         android:layout_width="150dp"
@@ -26,8 +26,7 @@
          android:paddingTop="15dp"
          android:paddingBottom="5dp"
          android:layout_below="@+id/selfie_imageView"
-         android:id="@+id/linearlayout1"
-         android:background="#d7ffeb">
+         android:id="@+id/linearlayout1">
 
         <ImageButton
             android:src="@drawable/norwood1"
@@ -73,8 +72,7 @@
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:layout_below="@+id/linearlayout1"
-        android:id="@+id/linearlayout2"
-        android:background="#d7ffeb">
+        android:id="@+id/linearlayout2">
         <ImageButton
             android:src="@drawable/norwood4"
             android:id="@+id/scale_4_button"
