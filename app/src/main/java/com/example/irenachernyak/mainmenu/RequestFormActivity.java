@@ -43,6 +43,7 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
 
     EditText firstnameEdittext;
 
+    boolean _sendingEmail = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,23 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
         addItemsToSpinners();
         findViewById(R.id.mainLayout).requestFocus();
         firstnameEdittext = (EditText)findViewById((R.id.editFirstNameText));
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        if(_sendingEmail){
+            Toast.makeText(RequestFormActivity.this, "Finished sending ...", Toast.LENGTH_SHORT).show();
+            _sendingEmail = false;
+
+            View v = getCurrentFocus();
+            if(v != null){
+                v.clearFocus();
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                findViewById(R.id.mainLayout).requestFocus();
+            }
+        }
     }
 
     @Override
@@ -142,6 +160,7 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
 
     public void SendEmail()
     {
+        _sendingEmail = true;
         Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
         String aEmailList[] = {"irenac@restorationrobotics.com"};
@@ -171,9 +190,9 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
 
 
         try {
-            startActivityForResult(emailIntent, 1000);
-//            finish(); // or go to the MainActivity
-//            Log.i("Finished sending ...", "");
+            startActivity(Intent.createChooser(emailIntent, "Send E-Mail"));
+//            Toast.makeText(RequestFormActivity.this, "Finished sending ...", Toast.LENGTH_SHORT).show();
+//            _sendingEmail = false;
         }
         catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(RequestFormActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
@@ -210,11 +229,6 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
         return null;
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1000 && resultCode == RESULT_OK) {
-            Toast.makeText(RequestFormActivity.this, "Email was sent successfully", Toast.LENGTH_SHORT).show();
-        }
-    }
 
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        if (requestCode == PICK_FROM_GALLERY && resultCode == RESULT_OK) {
