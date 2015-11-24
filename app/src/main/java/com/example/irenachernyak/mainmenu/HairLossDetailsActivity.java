@@ -14,9 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by irenachernyak on 8/13/15.
@@ -96,27 +94,14 @@ public class HairLossDetailsActivity extends AppCompatActivity {
     //load file from apps res/raw folder or Assets folder
     public String LoadFile(String fileName, boolean loadFromRawFolder) throws IOException
     {
-        //Create a InputStream to read the file into
-        InputStream iS;
+        String content = "";
+        try{
+            content = Utils.LoadFile(getResources(), fileName, loadFromRawFolder);
+        } catch(IOException ex) {
+            throw ex;
+        }
 
-        //get the file as a stream
-        iS = getResources().getAssets().open(fileName);
-
-
-        //create a buffer that has the same size as the InputStream
-        byte[] buffer = new byte[iS.available()];
-        //read the text file as a stream, into the buffer
-        iS.read(buffer);
-        //create a output stream to write the buffer into
-        ByteArrayOutputStream oS = new ByteArrayOutputStream();
-        //write this buffer to the output stream
-        oS.write(buffer);
-        //Close the Input and Output streams
-        oS.close();
-        iS.close();
-
-        //return the output stream as a String
-        return oS.toString();
+        return content;
     }
 
     @Override

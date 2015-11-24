@@ -62,7 +62,7 @@ public class RequestPhotosActivity extends AppCompatActivity {
         loadImageFromStorage(dirpath,IMAGENAME_LEFT, iv_left );
         loadImageFromStorage(dirpath,IMAGENAME_RIGHT, iv_right );
         loadImageFromStorage(dirpath,IMAGENAME_BACK, iv_back );
-        loadImageFromStorage(dirpath,IMAGENAME_TOP, iv_top );
+        loadImageFromStorage(dirpath, IMAGENAME_TOP, iv_top);
 
     }
 
@@ -140,12 +140,12 @@ public class RequestPhotosActivity extends AppCompatActivity {
                 iv.setImageBitmap(bmp);
 
                 // save bitmap as imagefile
-                String path = saveToInternalSorage(bmp, filename);
+                String path = saveToInternalStorage(bmp, filename);
             }
         }
     }
 
-    protected String saveToInternalSorage(Bitmap bitmapImage, String filename){
+    protected String saveToInternalStorage(Bitmap bitmapImage, String filename){
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
         // path to /data/data/yourapp/app_data/photos
         File directory = cw.getDir("photos", Context.MODE_PRIVATE);
@@ -181,5 +181,17 @@ public class RequestPhotosActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    public void onPolicyClick(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        intent.putExtra("policy", "RR_PrivacyPolicy.html");
+        startActivity(intent);
+    }
+
+    public void onTermsClick(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        intent.putExtra("policy", "RR_TOS.html");
+        startActivity(intent);
     }
 }

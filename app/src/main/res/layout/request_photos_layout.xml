@@ -125,7 +125,8 @@
             android:id="@+id/termsofuse_button"
             android:background="#d7ffeb"
             android:paddingRight="5dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onTermsClick"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -145,7 +146,8 @@
             android:id="@+id/privacypolicy_button"
             android:background="#d7ffeb"
             android:textColor="#0c10ff"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onPolicyClick"/>
 
         <Switch
             android:layout_width="wrap_content"
