@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     android:id="@+id/mainLayout"
-    android:focusableInTouchMode="true">
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    android:focusableInTouchMode="true"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
         <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
@@ -44,8 +43,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/firstname_layout"
-                android:id="@+id/lastname_layout"
+                 android:id="@+id/lastname_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
@@ -74,8 +72,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/lastname_layout"
-                android:id="@+id/email_layout"
+                 android:id="@+id/email_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_weight="1"
@@ -104,7 +101,6 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/email_layout"
                 android:id="@+id/phone_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -133,7 +129,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/phone_layout"
                 android:id="@+id/city_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -161,7 +156,6 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/city_layout"
                 android:id="@+id/state_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -189,7 +183,6 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/state_layout"
                 android:id="@+id/ethnicity_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -205,12 +198,10 @@
 
                 <Spinner
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:id="@+id/ethnicity_spinner"
-                    android:layout_weight="1"
-                    android:spinnerMode="dropdown"
                     android:background="@android:drawable/editbox_dropdown_light_frame"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="4dp"
                     android:popupBackground="#c1ffef"
                     />
             </LinearLayout>
@@ -219,7 +210,6 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ethnicity_layout"
                 android:id="@+id/gender_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -234,19 +224,18 @@
                     style="@style/RequestFormTextView"/>
 
                 <Spinner
-                    android:layout_width="103dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
                     android:id="@+id/gender_spinner"
-                    android:layout_weight="1"
-
-                    />
+                      android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="#c1ffef"/>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/gender_layout"
                 android:id="@+id/haircolor_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -261,18 +250,18 @@
                     style="@style/RequestFormTextView"/>
 
                 <Spinner
-                    android:layout_width="109dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
                     android:id="@+id/hcolor_spinner"
-                    android:layout_weight="1"
-                    />
+                     android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="#c1ffef"/>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/haircolor_layout"
                 android:id="@+id/hairtype_layout"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -287,43 +276,47 @@
                     style="@style/RequestFormTextView"/>
 
                 <Spinner
-                    android:layout_width="103dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
                     android:id="@+id/htype_spinner"
-                    android:layout_weight="1" />
+                    android:background="@android:drawable/editbox_dropdown_light_frame"
+                    android:paddingLeft="4dp"
+                    android:popupBackground="#c1ffef"/>
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Specific areas of concern"
-                android:id="@+id/concerns_textView"
-                android:layout_below="@+id/hairtype_layout"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                style="@style/RequestFormTextView"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/concerns_editText"
-                android:layout_below="@+id/concerns_textView"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:hint="hairline, crown, full head"
-                android:singleLine="true"
-                style="@style/RequestFormEditView"
-                android:background="@drawable/edittext_style"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/concerns_layout"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Specific areas of concern"
+                    android:id="@+id/concerns_textView"
+                    android:layout_weight="1"
+                    style="@style/RequestFormTextView"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/concerns_editText"
+                    android:layout_weight="1"
+                    android:hint="hairline, crown, full head"
+                    android:singleLine="true"
+                    style="@style/RequestFormEditView"
+                    android:background="@drawable/edittext_style"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/concerns_editText"
                 android:id="@+id/user_consent_layout"
                 android:layout_weight="1"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -349,19 +342,25 @@
 
             </LinearLayout>
 
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/button_email"
-        android:id="@+id/imageButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/user_consent_layout"
-        android:paddingBottom="5dp"
-        android:layout_alignParentBottom="false"
-        android:layout_centerInParent="true"
-        android:scaleType="fitCenter"
-        android:background="#d7ffeb"
-        android:layout_marginTop="15dp"
-        android:onClick="onSubmitRequest"/>
-    </RelativeLayout>
-</ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/button_email"
+                android:id="@+id/imageButton"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:background="#d7ffeb"
+                android:layout_marginTop="15dp"
+                android:onClick="onSubmitRequest"/>
+
+        </LinearLayout>
+
+    </LinearLayout>

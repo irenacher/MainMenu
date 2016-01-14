@@ -40,6 +40,7 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
     private static final int CAMERA_REQUEST = 1313;
     ImageView selfieImageView;
+//    GridView gridview;
 
      ImageButton selected;
 
@@ -49,18 +50,18 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
 
         setContentView(R.layout.pick_norwood_layout);
 
-        ((ImageButton)findViewById(R.id.scale_1_button)).setTag(0);
-        ((ImageButton)findViewById(R.id.scale_2_button)).setTag(1);
-        ((ImageButton)findViewById(R.id.scale_2a_button)).setTag(2);
-        ((ImageButton)findViewById(R.id.scale_3_button)).setTag(3);
-        ((ImageButton)findViewById(R.id.scale_3a_button)).setTag(4);
-        ((ImageButton)findViewById(R.id.scale_3vertex_button)).setTag(5);
-        ((ImageButton)findViewById(R.id.scale_4_button)).setTag(6);
-        ((ImageButton)findViewById(R.id.scale_4a_button)).setTag(7);
-        ((ImageButton)findViewById(R.id.scale_5_button)).setTag(8);
-        ((ImageButton)findViewById(R.id.scale_5a_button)).setTag(9);
-        ((ImageButton)findViewById(R.id.scale_6_button)).setTag(10);
-        ((ImageButton)findViewById(R.id.scale_7_button)).setTag(11);
+        findViewById(R.id.scale_1_button).setTag(0);
+        findViewById(R.id.scale_2_button).setTag(1);
+        findViewById(R.id.scale_2a_button).setTag(2);
+        findViewById(R.id.scale_3_button).setTag(3);
+        findViewById(R.id.scale_3a_button).setTag(4);
+        findViewById(R.id.scale_3vertex_button).setTag(5);
+        findViewById(R.id.scale_4_button).setTag(6);
+        findViewById(R.id.scale_4a_button).setTag(7);
+        findViewById(R.id.scale_5_button).setTag(8);
+        findViewById(R.id.scale_5a_button).setTag(9);
+        findViewById(R.id.scale_6_button).setTag(10);
+        findViewById(R.id.scale_7_button).setTag(11);
 
         TextView hintTV = (TextView)findViewById(R.id.norwood_hint_textView);
         hintTV.setText("Choose the image that matches your hair loss progression");
@@ -140,3 +141,4 @@ public class EvaluateNorwoodActivity extends AppCompatActivity{
         }
     }
 }
+

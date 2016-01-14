@@ -2,69 +2,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    >
+    android:padding="5dp" >
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:id="@+id/selfie_imageView"
-        android:layout_gravity="center_horizontal"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:src="@drawable/placeholder_top"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
-        android:clickable="true"
-        android:onClick="onSelfieClick" />
-
-     <LinearLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-         android:paddingTop="15dp"
-         android:paddingBottom="5dp"
-         android:layout_below="@+id/selfie_imageView"
-         android:id="@+id/linearlayout1">
+        android:id="@+id/image_layout"
+        android:layout_weight="0.3">
 
-        <ImageButton
-            android:src="@drawable/norwood1"
-            android:id="@+id/scale_1_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
-        <ImageButton
-            android:src="@drawable/norwood2"
-            android:id="@+id/scale_2_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
-        <ImageButton
-            android:src="@drawable/norwood2a"
-            android:id="@+id/scale_2a_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
-        <ImageButton
-            android:src="@drawable/norwood3"
-            android:id="@+id/scale_3_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
-        <ImageButton
-            android:src="@drawable/norwood3a"
-            android:id="@+id/scale_3a_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
-        <ImageButton
-            android:src="@drawable/norwood3vertex"
-            android:id="@+id/scale_3vertex_button"
-            style="@style/NorwoodImageButton">
-        </ImageButton>
-
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:id="@+id/selfie_imageView"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/placeholder_top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:clickable="true"
+            android:onClick="onSelfieClick" />
     </LinearLayout>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/image_layout"
+        android:id="@+id/linearlayout1"
+        android:layout_weight="0.2">
+
+       <ImageButton
+           android:src="@drawable/norwood1"
+           android:id="@+id/scale_1_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+       <ImageButton
+           android:src="@drawable/norwood2"
+           android:id="@+id/scale_2_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+       <ImageButton
+           android:src="@drawable/norwood2a"
+           android:id="@+id/scale_2a_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+       <ImageButton
+           android:src="@drawable/norwood3"
+           android:id="@+id/scale_3_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+       <ImageButton
+           android:src="@drawable/norwood3a"
+           android:id="@+id/scale_3a_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+       <ImageButton
+           android:src="@drawable/norwood3vertex"
+           android:id="@+id/scale_3vertex_button"
+           style="@style/NorwoodImageButton">
+       </ImageButton>
+
+   </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,7 +80,8 @@
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:layout_below="@+id/linearlayout1"
-        android:id="@+id/linearlayout2">
+        android:id="@+id/linearlayout2"
+        android:layout_weight="0.2">
         <ImageButton
             android:src="@drawable/norwood4"
             android:id="@+id/scale_4_button"
@@ -105,28 +114,34 @@
         </ImageButton>
     </LinearLayout >
 
-    <TextView
+     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearlayout2"
-        android:text="New Text"
-        android:id="@+id/norwood_hint_textView"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:layout_alignRight="@+id/linearlayout2"
-        android:layout_alignEnd="@+id/linearlayout2"
-        android:layout_alignParentLeft="true" />
+        android:layout_weight="0.3"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/norwood_hint_textView"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:textColor="#000000"
-        android:id="@+id/norwood_details_textView"
-        android:paddingTop="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:text="Medium Text"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:id="@+id/norwood_hint_textView"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/norwood_details_textView"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
 
 </RelativeLayout>

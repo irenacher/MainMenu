@@ -65,7 +65,7 @@ public class TopicsActivity extends AppCompatActivity{
         } else {
             SharedPreferences preferences = getPreferences(Context.MODE_PRIVATE);
             String sTitles = preferences.getString("TopicTitles", "");
-            resourceId = preferences.getInt("ImageResId",R.drawable.artas_robot);
+            resourceId = preferences.getInt("ImageResId", R.drawable.artas_robot);
             _infotype = preferences.getString("InfoType", getString(R.string.hair_loss_info_type));
             if(!sTitles.equals("")){
                 try {
@@ -146,7 +146,10 @@ public class TopicsActivity extends AppCompatActivity{
 
         // set image into ImageView
         ImageView imageView = (ImageView)findViewById(R.id.topics_imageView);
-        imageView.setImageResource(resourceId);
+
+        if(resourceId != 0) {
+            imageView.setImageResource(resourceId);
+        }
 
         try {
             getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_HOME_AS_UP);

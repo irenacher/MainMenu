@@ -105,23 +105,22 @@ public class RequestFormActivity extends AppCompatActivity implements AdapterVie
 
         String [] options = this.getResources().getStringArray(R.array.ethnicity_names);
         ArrayAdapter<String> ethnicity_spinner_adapter = new MySpinnerAdapter(this, R.layout.spinner_row_layout, options);
-        ethnicity_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        ethnicity_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ethnicity_spinner.setAdapter(ethnicity_spinner_adapter);
 
         options = this.getResources().getStringArray(R.array.gender_names);
         ArrayAdapter<String> gender_spinner_adapter = new MySpinnerAdapter(this, R.layout.spinner_row_layout, options);
-        gender_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        gender_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         gender_spinner.setAdapter(gender_spinner_adapter);
 
         options = this.getResources().getStringArray(R.array.hair_colors);
         ArrayAdapter<String> haircolor_spinner_adapter = new MySpinnerAdapter(this, R.layout.spinner_row_layout, options);
-        haircolor_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        haircolor_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         haircolor_spinner.setAdapter(haircolor_spinner_adapter);
 
         options = this.getResources().getStringArray(R.array.hair_types);
         ArrayAdapter<String> hairtype_spinner_adapter = new MySpinnerAdapter(this, R.layout.spinner_row_layout, options);
-
-        hairtype_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        hairtype_spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hairtype_spinner.setAdapter(hairtype_spinner_adapter);
 
         ethnicity_spinner.setOnItemSelectedListener(this);
