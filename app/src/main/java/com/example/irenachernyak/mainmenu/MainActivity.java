@@ -1,9 +1,9 @@
 package com.example.irenachernyak.mainmenu;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        ImageView adview = (ImageView)findViewById(R.id.bannerView);
+        adview.setVisibility(View.GONE);
+        ((LinearLayout)findViewById(R.id.buttons_layout)).requestLayout();
     }
 
     @Override
