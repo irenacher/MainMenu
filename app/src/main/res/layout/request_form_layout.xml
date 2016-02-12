@@ -325,7 +325,7 @@
                 android:layout_marginTop="5dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Any previous hair restoration treatments?"
                     android:id="@+id/treatments_textView"
@@ -334,7 +334,7 @@
                     />
 
                 <Switch
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/treatments_switch"
                     android:layout_weight="1"
